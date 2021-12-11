@@ -1,0 +1,29 @@
+\documentclass[10pt,letterpaper]{article}
+
+\input{Headers/packages}
+\input{Headers/pagesetup}
+\input{Headers/commands}
+
+% Use title case for the title
+\title{\LaTeX Template for AISTech Proceedings}
+
+% Authors and affiliation
+\author[1]{Author A}
+\author[2]{Author B}
+\author[2]{Author C}
+\affil[1]{Company Name\authorcr Street Address, State, Country, ZIP code\authorcr Phone:\authorcr Email: \authorcr\quad} % note the \authorcr\quad to create an empty line after the affiliation
+\affil[2]{Company Name\authorcr Street Address, State, Country, ZIP code\authorcr Phone:\authorcr Email:}
+
+\begin{document}
+% Title and keywords
+\maketitle
+\thispagestyle{empty}
+\keywords{ Term A, Term B, Term, C, Term D (Note: Authors are \textbf{not} limited to only 4 terms) }
+
+% include your chapters here
+\input{Chapters/01_Introduction.tex}
+\input{Chapters/02_MoreChapters.tex}
+
+% Bibliography
+\bibliography{literature}
+\end{document}

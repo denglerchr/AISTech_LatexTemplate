@@ -1,0 +1,41 @@
+% format title and spacing
+\setlength{\droptitle}{-4em}     % Eliminate the default vertical space
+\addtolength{\droptitle}{1.25in}   % Add 1.75-0.5 inch
+
+\pretitle{\begin{center}\fontsize{12pt}{15pt}\selectfont\textbf} % 12pt in author guide but 11pt in word template...
+\posttitle{\par\end{center}\vspace{1ex}}
+
+\preauthor{\begin{center}}
+\postauthor{\end{center}\vspace{-1em}}
+
+\predate{}
+\date{}
+\postdate{}
+
+\pagestyle{empty}
+
+% Spacing between authors and affiliations
+\setlength{\affilsep}{1em}
+\renewcommand\Authands{, } % no "and" in front of last author
+
+% Formatting of section, subsection, subsubsection
+\titleformat{\section}{\normalfont\normalsize\bfseries\centering\uppercase}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection.}{1em}{}
+
+\titlespacing*{\subsection}{0pt}{1em}{0pt}
+\titlespacing*{\subsubsection}{2em}{1em}{0pt}
+
+% Formatting of captions
+\captionsetup{labelsep=period} % replace "Figure x:" by "Figure x."
+
+% Keywords Command
+\providecommand{\keywords}[1]{\begin{center}Keywords: #1 \end{center}}
+
+% Bibiography style
+\renewcommand{\bibsection}{\section*{References}} % correct title format
+\bibliographystyle{aistechref} %based on plainnat
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1.\qquad} % Change reference numbering from [1] to 1.
+\makeatother
