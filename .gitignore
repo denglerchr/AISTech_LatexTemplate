@@ -1,0 +1,6 @@
+# ignore all the following file types
+*.log
+*.aux
+*.bbl
+*.blg
+*.gz
